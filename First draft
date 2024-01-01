@@ -1,0 +1,45 @@
+ -- Non strings 
+All non-string types (such as numbers) should be converted into strings when printing them. 
+local age = 24
+print(tostring(age)) – Although it is usually okay to print number types, as they seem to be automatically casted to strings. The Type Checker might not like this, though.
+ 
+-- Addition with strings
+Instead of using + when combining strings, you use ..
+print(age..name)
+
+
+ -- Datatypes: 
+Nil = nothing/empty - it doesn’t exist
+Number = -5, 4, 1 
+String = text, for instance (“Hello world”)
+Boolean = true/false 
+Tables = lists 
+
+ -- Chunks: 
+A sequence of statements 
+    a = 1
+    b = a*2
+    
+    a = 1;
+    b = a*2;
+    
+    a = 1 ; b = a*2
+    
+    a = 1   b = a*2
+Everything above generates the same results 
+
+ -- Interactive mode 
+After each command that you type executes immediately after you press <enter> 
+To exit the interpreter and the interactive mode - type end-of-file or use the exit function (os.exit()<enter>)
+
+-- Linking chunks with files using the stand-alone interpreter 
+Option 1: -1 --> calls the require function 
+file a - x=1
+file b - print(x)
+prompt > lua -1a -1b 
+This will execute the code of oth those files as they "work together" and will give 1 
+
+Option 2: -i --> interactive session 
+prompt > -i -1a -1b --> it will prompt you for interaction (debugging and manual testing) 
+
+Option 3: dofile function --> immediately executes a file 
